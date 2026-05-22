@@ -42,12 +42,12 @@
     "clean": "rm -rf dist node_modules/.cache"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/node": "^22.10.0",
+    "@biomejs/biome": "2.4.15",
+    "@types/node": "^25.9.1",
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
   },
   "keywords": ["typescript", "template", "cli", "codepawl"],
   "pnpm": {
