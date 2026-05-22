@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { VERSION, hello } from "../src/index.js";
+import { hello, VERSION } from "../src/index.js";
 
 describe("hello", () => {
   it("greets world by default", () => {
