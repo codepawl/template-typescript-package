@@ -10,6 +10,9 @@
 #   - test (20)
 #   - test (22)
 #
+# (Workflow name "ci" + matrix job "test (<node>)" — confirm against the
+# Actions tab before running.)
+#
 # All lite-variant rules also apply:
 #   - block deletion
 #   - block non-fast-forward

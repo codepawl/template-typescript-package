@@ -19,7 +19,8 @@ a new repo (or when configuring the template repo itself).
    ```
 
 3. **Wait for CI to run at least once.** Check the Actions tab on GitHub and
-   confirm the job names match `test (20)` and `test (22)`.
+   confirm the check names match `test (20)` and `test (22)`
+   (workflow `ci` + matrix job `test (<node>)`).
 
 4. **Configure repository settings**
    ```bash
