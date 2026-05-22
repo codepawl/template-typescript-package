@@ -7,8 +7,11 @@
 # CI job names exactly, or main will become un-mergeable.
 #
 # Required status checks:
-#   - test (20)
-#   - test (22)
+#   - ci / test (20)
+#   - ci / test (22)
+#
+# (Workflow name "ci" + matrix job "test (<node>)" — confirm against the
+# Actions tab before running.)
 #
 # All lite-variant rules also apply:
 #   - block deletion
@@ -32,7 +35,7 @@ step() { printf "\n==> %s\n" "$*"; }
 warn() { printf "\n!! %s\n" "$*" >&2; }
 
 warn "Run this only after CI has completed once and check names are confirmed."
-warn "Required check names: 'test (20)', 'test (22)'."
+warn "Required check names: 'ci / test (20)', 'ci / test (22)'."
 
 payload=$(cat <<'JSON'
 {
@@ -65,8 +68,8 @@ payload=$(cat <<'JSON'
       "parameters": {
         "strict_required_status_checks_policy": true,
         "required_status_checks": [
-          { "context": "test (20)" },
-          { "context": "test (22)" }
+          { "context": "ci / test (20)" },
+          { "context": "ci / test (22)" }
         ]
       }
     }
