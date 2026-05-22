@@ -1,4 +1,4 @@
-import { VERSION, hello } from "../src/index.js";
+import { hello, VERSION } from "../src/index.js";
 
 console.log(`@codepawl/template v${VERSION}`);
 console.log(hello());

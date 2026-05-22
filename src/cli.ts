@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { VERSION, hello } from "./index.js";
+import { hello, VERSION } from "./index.js";
 
 const HELP = `codepawl-template - CodePawl TypeScript template CLI
 
