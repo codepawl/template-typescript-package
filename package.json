@@ -1,0 +1,56 @@
+{
+  "name": "@codepawl/template",
+  "version": "0.0.0",
+  "description": "Standard TypeScript package and CLI template for CodePawl projects.",
+  "license": "MIT",
+  "author": "An Nguyen <founder@codepawl.com>",
+  "homepage": "https://codepawl.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepawl/template-typescript-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codepawl/template-typescript-package/issues"
+  },
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "codepawl-template": "./dist/cli.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check",
+    "clean": "rm -rf dist node_modules/.cache"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "keywords": ["typescript", "template", "cli", "codepawl"],
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+  }
+}
