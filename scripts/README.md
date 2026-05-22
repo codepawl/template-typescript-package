@@ -19,7 +19,7 @@ a new repo (or when configuring the template repo itself).
    ```
 
 3. **Wait for CI to run at least once.** Check the Actions tab on GitHub and
-   confirm the check names match `ci / test (20)` and `ci / test (22)`
+   confirm the check names match `test (20)` and `test (22)`
    (workflow `ci` + matrix job `test (<node>)`).
 
 4. **Configure repository settings**
@@ -40,7 +40,7 @@ a new repo (or when configuring the template repo itself).
    ```bash
    bash scripts/create-main-ruleset-with-ci.sh
    ```
-   Adds required status checks `ci / test (20)` and `ci / test (22)`. Reuses the existing
+   Adds required status checks `test (20)` and `test (22)`. Reuses the existing
    ruleset name; if the in-place update misbehaves, delete `Protect main` in
    **Settings > Rules > Rulesets** and re-run.
 
