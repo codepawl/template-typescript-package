@@ -42,4 +42,4 @@ step "Enabling automated Dependabot security updates (best effort)"
 gh api -X PUT "repos/${FULL}/automated-security-fixes" --silent || true
 
 step "Done. Verifying view:"
-gh repo view "${FULL}" --json name,description,homepage,isTemplate,hasIssuesEnabled,hasWikiEnabled,hasProjectsEnabled,hasDiscussionsEnabled,deleteBranchOnMerge,squashMergeAllowed,mergeCommitAllowed,rebaseMergeAllowed,autoMergeAllowed,repositoryTopics
+gh repo view "${FULL}" --json name,description,homepageUrl,isTemplate,hasIssuesEnabled,hasWikiEnabled,hasProjectsEnabled,hasDiscussionsEnabled,deleteBranchOnMerge,squashMergeAllowed,mergeCommitAllowed,rebaseMergeAllowed,repositoryTopics
